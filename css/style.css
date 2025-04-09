@@ -19,9 +19,9 @@
   /* colors */
   --color-white: #fff;
   --color-black: #050a13;
-  --color-blue: #629bf0;
-  --color-orange: #ff803c;
-  --color-gray: #5e667e;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
 
   /* size */
   --size-max-width: 1200px;
@@ -32,9 +32,8 @@
 }
 
 body {
-  font-family: "NanumSquareNeoLight";
+  font-family: "GmarketSansMedium";
   margin: 0;
-  line-height: 1.6;
 }
 
 h1,
@@ -97,8 +96,6 @@ button:focus {
 .header__logo__img {
   width: 36px;
   height: 36px;
-  border-radius: 100%;
-  border: 2px solid var(--color-accent);
 }
 .header__logo__title {
   font-size: 1.8rem;
@@ -198,17 +195,13 @@ button:focus {
 .job__img {
   width: 300px;
   height: 200px;
-  border: 2px dotted var(--color-primary-variant);
-  border-radius: 10%;
 }
 .job__name {
   color: var(--color-primary);
-  font-weight: bold;
 }
 .job__period {
   color: var(--color-primary);
   font-size: 0.8rem;
-  font-weight: bold;
 }
 
 /* skills */
@@ -220,6 +213,7 @@ button:focus {
   display: grid;
   grid-template-columns: 6fr 4fr;
   margin: 2rem 3rem;
+  border-radius: 8px;
   overflow: hidden;
 }
 .tools__title {
@@ -231,7 +225,6 @@ button:focus {
   grid-row: span 2; /* 2개의 행을 차지하도록 설정 */
   padding: 1rem;
   background-color: var(--color-primary);
-  border-radius: 5%;
 }
 .bar {
   display: flex;
@@ -261,8 +254,7 @@ button:focus {
   filter: brightness(150%);
 }
 
-/* works */
-
+/* work */
 #work {
   background-color: var(--color-primary);
   color: var(--color-text);
@@ -305,24 +297,20 @@ button:focus {
   opacity: 1;
   top: 0;
 }
-
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
 }
-
 .project {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
-
 .project__img {
   width: 100%;
 }
-
 .project__metadata {
   position: absolute;
   top: 0;
@@ -338,18 +326,16 @@ button:focus {
   transition: all 250ms ease-in;
   transform: translateY(-10px);
 }
-
 .project__metadata:hover {
   opacity: 0.8;
   transform: translateY(0px);
 }
-
-/* 
+/*
   after: 요소 뒤에 가상의 요소를 하나 만들어주는 선택자
   content: "" 아무 내용도 없는 빈 가상 요소를 만듦
   display: block; 가상 요소를 블록 요소처럼 만들어서 크기를 줄 수 있게 함
 */
-.project__title::after {
+.project__title:after {
   content: "";
   display: block;
   position: relative;
@@ -365,35 +351,30 @@ button:focus {
 .licenses {
   margin: 3rem;
 }
-
 .license {
   display: flex;
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
 }
-
 .license__img {
   width: 150px;
   height: 150px;
   border-radius: 100%;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 }
-
 .license__bubble {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
-
-.license__bubble__name {
+.license__buble__name {
   color: var(--color-accent);
   font-weight: bold;
   filter: brightness(70%);
 }
 
 /* arrow up */
-
 .arrow-up {
   background-color: var(--color-primary);
   position: fixed;
@@ -405,4 +386,23 @@ button:focus {
   border-radius: 100%;
   text-align: center;
   box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
+
+/* footer */
+#contact {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.contact__link {
+  transition: color 250ms ease-in;
+}
+.contact__link:hover {
+  color: var(--color-accent);
 }
